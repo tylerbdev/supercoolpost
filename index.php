@@ -1,6 +1,7 @@
 <?php
 include "header.php";
 include "db.php";
+include "session.php";
 ?>
 
 <center><h1>Welcome</h1></center>

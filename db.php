@@ -5,8 +5,10 @@ $dbuser = 'root';
 $dbpass = '';
 $dbname = 'supercoolpost';
 
-$connect = mysql_connect($dbhost, $dbuser, $dbpass);
 
-mysql_select_db($dbname);
+
+
+ $db = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
+   
 
 ?>

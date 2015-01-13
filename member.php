@@ -1,7 +1,7 @@
 <?php
 include "header.php";
 include "db.php";
-include "session.php";
+
 ?>
 <?php
 
@@ -33,7 +33,27 @@ while($row = mysql_fetch_array($result, MYSQL_ASSOC)){
 				</div>
 			</div>
 			<div class="col2">
-				<div class="box"><h4 class="panel_title">Post List</h4></div>
+				<div class="box">
+				<h4 class="panel_title">Post List</h4>
+				<?php
+
+				$stmt = $db->prepare('SELECT * FROM blogs WHERE owner = ?');
+				$stmt->bindParam(1, $_SESSION['uid'], PDO::PARAM_INT);
+				$stmt->execute();
+				 $row = $stmt->fetchALL(PDO::FETCH_ASSOC);
+
+				 echo "<ul>";
+				for($count = 0; $count < count($row); $count++){
+					echo 
+					//dont forget to make the line spacing on this vvv less than default
+					'<li class="post_listing">' . '<span class="post_listing_title">' . $row[$count]['title'] . '</span></br>' . '<span class="post_listing_body">' . substr($row[$count]['body'],0,30) . '...</span></br> <span class="edit_delete">Edit   Delete</span></li>';			
+					//put a javascript confirmation of the delete ^^^
+				}	
+				
+				echo "</ul>";
+				?>
+
+				</div>
 
 			</div>
 			<div class="col3">
