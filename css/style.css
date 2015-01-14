@@ -77,8 +77,9 @@ body {
 	padding:10px;
 }
 .box {
-	border:1px solid grey;
-	
+	border:1px solid gray;
+	list-style-type: none;
+	border-radius: 25px;
 	padding:10px;
 }	
 
@@ -87,15 +88,19 @@ body {
 }
 
 
+
 .post_listing {
-	list-style-type: none;
-	padding:0;
-	magin:0;
+	
 	font-family:sans-serif;
-}
+	
+	}
 
 .edit_delete {
 	text-align: right;
+}
+
+.datetime {
+	color:gray;
 }
 
 .post_listing_title {
