@@ -5,7 +5,7 @@ include "db.php";
 
 $post_id = $_GET['post_id']
 
-
+// IF POST ID 
 
 ?>
 
@@ -28,12 +28,12 @@ $post_id = $_GET['post_id']
 		<div class="colleft">
 			<div class="col1">
 				<div class="main_box">
-					<h1 class="panel_title">Edit Post</h1>
-					<form name="update_post_form" action="update_post.php" method="POST">
+					<h1 class="panel_title">Edit Draft</h1>
+					<form name="update_draft_form" action="update_draft.php" method="POST">
 					<textarea class="textbox" cols="40" rows="1" name="title" placeholder="Title"><?php echo $row[0]['title']?></textarea>
 					<textarea class="textbox" cols="40" rows="5" name="body"><?php echo $row[0]['body']?></textarea>
-					<input type="checkbox" name="update_datetime" value="update_datetime">Update Date and Time<br>
-					<input type="submit" name="update_post" value="Update"></input><input type="submit" name="update_post" value="Save As Draft"></input>
+					<input type="checkbox" name="update_datetime" value="update_datetime" checked>Update Date and Time<br>
+					<input type="submit" name="update_draft" value="Update Draft"></input><input type="submit" name="update_draft" value="Post"></input>
 					<input type="hidden" name="post_id" value="<?php echo $post_id ?>" />
 					</form>
 

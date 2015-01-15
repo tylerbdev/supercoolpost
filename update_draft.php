@@ -11,10 +11,10 @@ include "db.php";
   $datetime = date("Y-m-d H:i:s");
    // dont forget to add CUSTOM TIMEZONE functionality here!!!
   
- if($_POST['update_post'] == "Update"){
-    $draft = 0; 
-  } elseif($_POST['update_post'] == "Save As Draft"){
-    $draft = 1;
+ if($_POST['update_draft'] == "Update Draft"){
+    $draft = 1; 
+  } elseif($_POST['update_draft'] == "Post"){
+    $draft = 0;
   }
   
 

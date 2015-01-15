@@ -55,7 +55,7 @@ while($row = mysql_fetch_array($result, MYSQL_ASSOC)){
 
 				for($count = 0; $count < count($row); $count++){
 					if($row[$count]['draft'] == 1){
-					echo '<p><span class="post_listing">' . '<span class="post_listing_title">' . $row[$count]['title'] . ' (Draft)</span></br>' . '<span class="post_listing_body">' . substr($row[$count]['body'],0,60) . '...</span></br><span class="datetime">' . $row[$count]['datetime'] . ' </span><span class="edit_delete"><a href="edit_post.php?post_id=' . $row[$count]['id'] . '">Edit</a>   Delete</span></p>';			
+					echo '<p><span class="post_listing">' . '<span class="post_listing_title">' . $row[$count]['title'] . ' (Draft)</span></br>' . '<span class="post_listing_body">' . substr($row[$count]['body'],0,60) . '...</span></br><span class="datetime">' . $row[$count]['datetime'] . ' </span><span class="edit_delete"><a href="edit_draft.php?post_id=' . $row[$count]['id'] . '">Edit</a>   Delete</span></p>';			
 					} else {
 						echo '<p><span class="post_listing">' . '<span class="post_listing_title">' . $row[$count]['title'] . '</span></br>' . '<span class="post_listing_body">' . substr($row[$count]['body'],0,60) . '...</span></br><span class="datetime">' . $row[$count]['datetime'] . ' </span><span class="edit_delete"><a href="edit_post.php?post_id=' . $row[$count]['id'] . '">Edit</a>   Delete</span></p>';			
 					}
