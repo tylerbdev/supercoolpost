@@ -31,6 +31,7 @@ if( ! $row)
 	$_SESSION['username'] = $username;
 	$_SESSION['password'] = $password;
 	$_SESSION['uid'] = $row['uid'];
+	$_SESSION['timezone'] = $row['timezone'];
 	header('Location: member.php');
 }
 

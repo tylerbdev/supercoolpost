@@ -5,3 +5,4 @@ include "db.php";
 echo "cool, your post was saved";
 
 ?>
+
