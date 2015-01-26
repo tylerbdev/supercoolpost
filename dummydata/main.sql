@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 14, 2015 at 05:28 AM
+-- Generation Time: Jan 26, 2015 at 05:52 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -36,19 +36,21 @@ CREATE TABLE IF NOT EXISTS `main` (
   `public_toggle` tinyint(1) NOT NULL,
   `theme` varchar(255) NOT NULL,
   `about_toggle` tinyint(1) NOT NULL,
-  `timezone` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+  `timezone` varchar(255) NOT NULL,
+  `about` varchar(500) NOT NULL,
+  `first_setup_complete` tinyint(1) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `main`
 --
 
-INSERT INTO `main` (`uid`, `email`, `password`, `username`, `title`, `subtitle`, `public_toggle`, `theme`, `about_toggle`, `timezone`) VALUES
-(1, 'A@a.com', 'albatross', 'mick', 'Mick''s World', 'A Blog on Christ', 0, 'grunge', 1, ''),
-(2, 'b@b.com', 'pass', 'johnnybgood', 'Recipes for the Holidays', '', 1, 'basic', 1, ''),
-(3, 'hegfen@homtail15.com', 'eagleface', 'ToothPasteReviewer', 'Tooth Paste Reviews', 'Only the most in-depth reviews', 1, 'flowers', 0, ''),
-(4, 'festeringswine@evil.net', 'oppenheimer', 'PhysicsMan', 'The World is Falling', 'Conspiracies & Alternative News', 1, 'codey', 1, ''),
-(5, 'bubble@pink.au.ico', 'utitjwijtiwt', 'Betty409', 'Betty''s Place', '', 0, 'space', 1, '');
+INSERT INTO `main` (`uid`, `email`, `password`, `username`, `title`, `subtitle`, `public_toggle`, `theme`, `about_toggle`, `timezone`, `about`, `first_setup_complete`) VALUES
+(1, 'A@a.com', 'albatross', 'mick', 'Mick''s World Test', 'A Blog on Christ Test', 1, 'flowery', 1, 'Pacific/Midway', 'This is my new blog.', 1),
+(2, 'b@b.com', 'pass', 'johnnybgood', 'Recipes for the Holidays', '', 1, 'basic', 1, '', '', 1),
+(3, 'hegfen@homtail15.com', 'eagleface', 'ToothPasteReviewer', 'Tooth Paste Reviews', 'Only the most in-depth reviews', 1, 'flowers', 0, '', '', 1),
+(4, 'festeringswine@evil.net', 'oppenheimer', 'PhysicsMan', 'The World is Falling', 'Conspiracies & Alternative News', 1, 'codey', 1, '', '', 1),
+(5, 'bubble@pink.au.ico', '409', 'Betty409', 'Betty''s Place', '', 0, 'basic', 1, 'Chile/EasterIsland', '', 1);
 
 --
 -- Indexes for dumped tables
@@ -68,7 +70,7 @@ ALTER TABLE `main`
 -- AUTO_INCREMENT for table `main`
 --
 ALTER TABLE `main`
-MODIFY `uid` int(255) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `uid` int(255) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

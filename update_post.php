@@ -7,9 +7,9 @@ include "db.php";
   $body = $_POST['body'];
   $id = $_POST['post_id'];
   
-  //if($_POST['update_date']) MAKE SURE TO MAKE IT SO THE DATE IS UPDATED BY CHOICE!!! ("warning this will change the display order of your blog page!")
-  $datetime = date("Y-m-d H:i:s");
-   // dont forget to add CUSTOM TIMEZONE functionality here!!!
+ $now = new DateTime();
+$now->setTimezone(new DateTimeZone($_SESSION['timezone']));
+$datetime = $now->format("Y-m-d H:i:s");
   
  if($_POST['update_post'] == "Update"){
     $draft = 0; 

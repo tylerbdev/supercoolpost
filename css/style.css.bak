@@ -1,0 +1,123 @@
+body {
+	margin:0px;
+	background-color:#E1E1E1;
+}
+
+.panel_title {
+	font-family:sans-serif;
+	text-align:center;
+}
+
+.header_table{
+	width:100%;
+	background-image: url("../images/banner_bg.jpg");
+	background-repeat:repeat-x;
+	background-color:#ff9933;
+	display:table;
+	height:130px;
+}
+
+
+#loginbox {
+	height:100%;
+	width:70%;
+	font-family:sans-serif;
+	background-color: ff5d43;
+	border:1px solid black;
+	border-radius: 25px;
+	padding:10px;
+
+}
+
+.colmask {
+	position:relative;	
+	clear:both;
+	float:left;
+	width:100%;			
+	overflow:hidden;		
+}
+
+.colright,
+.colmid,
+.colleft {
+	float:left;
+	width:100%;			
+	position:relative;
+}
+.col1,
+.col2,
+.col3 {
+	float:left;
+	position:relative;
+	padding:0 0 1em 0;						
+	overflow:hidden;
+}
+
+.threecol {
+	background:#eee;		
+}
+.threecol .colmid {
+	right:25%;			
+	background:#fff;		
+}
+.threecol .colleft {
+	right:50%;			
+	background:#f4f4f4;	
+}
+.threecol .col1 {
+	width:46%;			
+	left:102%;	
+	padding-top: 10px;		
+}
+.threecol .col2 {
+	width:21%;			
+	left:31%;
+	padding-top: 10px;	
+
+}
+.threecol .col3 {
+	width:21%;			
+	left:85%;
+	padding-top: 10px;		
+}
+
+.main_box {
+	border:1px solid black;
+	border-radius: 25px;
+	padding:10px;
+}
+.box {
+	border:1px solid gray;
+	list-style-type: none;
+	border-radius: 25px;
+	padding:10px;
+}	
+
+.textbox {
+	width:100%;
+}
+
+
+
+.post_listing {
+	
+	font-family:sans-serif;
+	
+	}
+
+.edit_delete {
+	text-align: right;
+}
+
+.datetime {
+	color:gray;
+}
+
+.post_listing_title {
+	color:orange;
+	font-size:2em;
+}
+.post_listing_body {
+	color:gray;
+	font-style:italic;
+}

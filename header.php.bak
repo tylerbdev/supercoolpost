@@ -1,0 +1,49 @@
+<?php session_start();
+?>
+<html>
+<head>
+<title>"Welcome to SuperCoolPost!"</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="jquery-1.11.2.min.js" type="text/javascript"></script>
+<body>
+<table class="header_table">
+	<tr>
+	<td style="width:70%; padding-left:9px"><a href="index.php"><img src="images/logo.png" height="100px"></img></a></td>
+	<td style="width:30%">
+		<div id="login">
+		<div id="loginbox">
+		<?php 
+			error_reporting(E_ALL & ~E_NOTICE); 
+			if($_SESSION['login'] == "valid"){
+				echo "Welcome, " . $_SESSION['username'] . ". <a href='logout.php'>Log out</a>";
+				echo "<p><a href='member.php'>Member Portal</a> | <a href='member_blog/" . $_SESSION['username'] . "/index.php'>View My Blog</a></p>";
+
+			} elseif($_SESSION['login'] == "invalid"){
+			echo "<p>Login invalid, please try again. [Forgot Password?]";
+			echo"<pre>
+				<form action='verify.php' method='post'>
+				<label>UserName:</label>
+				<input id='name' name='username' placeholder='username' type='text'></br>
+				<label>Password:</label>
+				<input id='password' name='password' type='password'>
+				<input name='submit' type='submit' value='Login'>
+				</form>
+				</pre>";
+			} elseif(!$_SESSION || $_SESSION == NULL){
+				echo "<pre>
+				<form action='verify.php' method='post'>
+				<label>UserName:</label><input id='name' name='username' placeholder='username' type='text'></br>
+				<label>Password:</label><input id='password' name='password' type='password'>
+				<input name='submit' type='submit' value='Login'>
+				</form>
+				</pre>";
+			}
+		?>
+		</div>		
+		</div>
+
+
+	</td>
+	</tr>
+</table>
+

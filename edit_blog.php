@@ -11,15 +11,12 @@ $uid = $_SESSION['uid'];
 	$stmt->execute();
 	$row = $stmt->fetchALL(PDO::FETCH_ASSOC);
 
-// $row[0][theme] switch case xyz, ondocumentload put that theme in dropdown/radio
-	//selected="selected"
-
 $theme = $row[0]['theme'];
 $timezone = $row[0]['timezone'];
 $about_toggle = $row[0]['about_toggle'];
 $public_toggle = $row[0]['public_toggle'];
 
-//
+
 
 ?>
 
@@ -171,16 +168,7 @@ $(function() {
 			</div>
 			<div class="col2">
 				
-			<?php echo $row[0]['theme'] . "</br>";
-			echo $row[0]['about_toggle'] . "</br>";
-			echo $row[0]['public_toggle'] . "</br>";
-			echo $row[0]['timezone'] . "</br>";
-
-			date_default_timezone_set ( $row[0]['timezone'] );
-			echo date_default_timezone_get();
-			echo date("Y-m-d H:i:s");
-
-			 ?>
+			
 				</div>
 
 			</div>

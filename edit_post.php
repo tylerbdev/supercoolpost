@@ -3,21 +3,18 @@ include "header.php";
 include "db.php";
 
 
-$post_id = $_GET['post_id']
+$post_id = $_GET['post_id'];
+$owner = $_SESSION['uid'];
 
-
-
-?>
-
-
-<?php
-
-	//if post id is not a post associated with the session user uid, return error page (SORRY THIS RESOURCE IS NOT AVAILABLE)
 
 	$stmt = $db->prepare('SELECT * FROM blogs WHERE id = ?');
 	$stmt->bindParam(1, $post_id, PDO::PARAM_STR);
 	$stmt->execute();
 	$row = $stmt->fetchALL(PDO::FETCH_ASSOC);
+
+	if($row[0]['owner'] != $owner){
+		header("Location: member.php");
+	}
 
 ?>
 
@@ -32,7 +29,7 @@ $post_id = $_GET['post_id']
 					<form name="update_post_form" action="update_post.php" method="POST">
 					<textarea class="textbox" cols="40" rows="1" name="title" placeholder="Title"><?php echo $row[0]['title']?></textarea>
 					<textarea class="textbox" cols="40" rows="5" name="body"><?php echo $row[0]['body']?></textarea>
-					<input type="checkbox" name="update_datetime" value="update_datetime">Update Date and Time<br>
+					<input type="checkbox" name="update_datetime" value="update_datetime">Update Date and Time (This will change the current display order on your blog)<br>
 					<input type="submit" name="update_post" value="Update"></input><input type="submit" name="update_post" value="Save As Draft"></input>
 					<input type="hidden" name="post_id" value="<?php echo $post_id ?>" />
 					</form>

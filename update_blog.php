@@ -2,10 +2,12 @@
 include "header.php";
 include "db.php";
 
- 
-  $title = $_POST['title'];
-  $subtitle = $_POST['subtitle'];
-  $uid = $_SESSION['uid'];
+$title = $_POST['title'];
+$subtitle = $_POST['subtitle'];
+$uid = $_SESSION['uid'];
+
+//Get rid of setup prompt on member portal
+$setup_status = 1;	
 
 //Get Theme Choice
 if($_POST['theme'] == "grunge"){
@@ -34,9 +36,9 @@ if($_POST['public_toggle'] && $_POST['public_toggle'] == 1){
 
 //Get Timezone
 $timezone = $_POST['timezone'];
+$_SESSION['timezone'] = $timezone;
 	
-	
-$sql = "UPDATE main SET title=:title, subtitle=:subtitle, theme=:theme, timezone=:timezone, about_toggle=:about_toggle, public_toggle=:public_toggle WHERE uid = $uid";
+$sql = "UPDATE main SET title=:title, subtitle=:subtitle, theme=:theme, timezone=:timezone, about_toggle=:about_toggle, public_toggle=:public_toggle, first_setup_complete=:setup_status WHERE uid = $uid";
                                           
 $stmt = $db->prepare($sql);
                                               
@@ -46,11 +48,8 @@ $stmt->bindParam(':theme', $theme, PDO::PARAM_STR);
 $stmt->bindParam(':timezone', $timezone, PDO::PARAM_STR);
 $stmt->bindParam(':about_toggle', $about_toggle, PDO::PARAM_STR);
 $stmt->bindParam(':public_toggle', $public_toggle, PDO::PARAM_STR);
-                                      
+$stmt->bindParam(':setup_status', $setup_status, PDO::PARAM_STR);
 $stmt->execute(); 
 
 header('Location: settings_confirm.php');
-
-
-
 ?>
