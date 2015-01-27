@@ -159,7 +159,7 @@ $(function() {
 					<option value="Pacific/Chatham">(GMT+12:45) Chatham Islands</option>
 					<option value="Pacific/Tongatapu">(GMT+13:00) Nuku&#39;alofa</option>
 					<option value="Pacific/Kiritimati">(GMT+14:00) Kiritimati</option></select></br>
-					<input type="checkbox" name="about_toggle" value="1">Toggle About Section<br>
+					<input type="checkbox" name="about_toggle" value="1">Show About Section<br>
 					<input type="checkbox" name="public_toggle" value="1">Make Blog Public<br> 
 					<input type="submit" name="update_blog" value="Update"></input>
 					</form>
