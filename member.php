@@ -20,9 +20,7 @@ $first_setup_complete = $main_row[0]['first_setup_complete'];
 <script>
 	var first_setup_complete = <?php echo $first_setup_complete ?>;
 	ovr = document.getElementById("new_user_overlay");
-		ovr.style.visibility = "hidden";
 	if(first_setup_complete == 0){
-		ovr = document.getElementById("new_user_overlay");
 		ovr.style.visibility = "visible";
 		
 	} else {
