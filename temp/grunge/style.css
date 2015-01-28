@@ -1,0 +1,259 @@
+body {
+	background-image:url("bg.jpg");
+	font-family:serif;
+	margin:0;
+}
+
+@font-face {
+	font-family:'Downcome-Regular';
+	src: url('Downcome_gdi.eot');
+	src: url('Downcome_gdi.eot?#iefix') format('embedded-opentype'),
+		url('Downcome_gdi.woff') format('woff'),
+		url('Downcome_gdi.ttf') format('truetype'),
+		url('Downcome_gdi.svg#Downcome-Regular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-25CA;
+}
+
+#top_bg {
+	margin:auto;
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	z-index: -1;
+	background-image: url('bg_grad.png');
+	background-repeat:repeat-x;
+	background-position:top;
+}
+
+#wrapper {
+	width:75%;
+	margin:auto;
+	min-width:960px;
+	height:95%;
+
+
+}
+
+#header{
+	display:block;
+	margin-top:30px;
+	line-height: 320%;
+	text-align: center;
+	letter-spacing: .25em;
+	position:relative;
+
+}
+
+#header .title {
+	font-size:5em;
+	color:#EDEDED;
+	font-weight:200;
+	font-family: Downcome-Regular, serif;
+
+}
+#header .title a{
+	text-decoration:none;
+	color:#EDEDED;
+}
+#header .title a:visited{
+	text-decoration:none;
+	color:EDEDED;
+}
+#header .title a:active{
+	text-decoration:none;
+	color:#DDE7F0;
+}
+#header .title a:hover{
+	text-decoration:none;
+	color:red;
+}
+
+#header .subtitle {
+	font-size:1.5em;
+	color:white;
+	font-family: IM Fell English, serif;
+	text-transform:uppercase;
+}
+
+#main {
+	display:block;
+	background-color: #E6E6E6;
+	background-image: url('grunge.png');
+	background-position:top;
+	background-repeat: repeat-x;
+	border:1px solid gray;
+	float:left;
+	width:68%;
+	margin-top:10px;
+	margin-bottom:30px;
+	padding:10px;
+}
+
+.post_title {
+	color:#111;
+	font-size:2em;
+	font-weight:600;
+	font-family: IM Fell English, serif;
+	text-transform:uppercase;
+}
+
+.post_body {
+	background-color:rgba(256,256,256,.5);
+	border-radius:25px;
+	padding:5px;
+	display:inline-block;
+}
+
+.post_listing {	
+	font-family:serif;
+
+}
+
+.post_listing a {	
+
+	color:#111;
+	text-decoration:none;
+}
+.post_listing a:visited {	
+	
+
+	color:#111;
+	text-decoration:none;	
+}
+.post_listing a:hover {	
+
+	color:red;	
+}
+
+
+.datetime {
+	color:gray;
+}
+.post_listing_title {
+	font-family: IM Fell English, serif;
+	text-transform:uppercase;
+	font-weight:600;
+	color:#111;
+	font-size:2em;
+}
+
+.post_listing_body {
+	color:black;
+	font-style:italic;
+}
+
+#sidebox {
+	display:block;
+	float:right;
+	width:29%;
+	margin-top:10px;
+}
+#sidebox h3 {
+	margin-top:10px;
+}
+
+#about_box {
+	color:white;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;
+	padding-top:1px;
+	background-color: #111111;
+	background-image: url('grunge_w.png');
+	background-position:top;
+	background-repeat: repeat-x;
+	margin-bottom:16px;
+}
+#about_box h3 {
+	font-family: Downcome-Regular, serif;
+	text-shadow: 0px 3px 1px rgba(0, 4, 0, 1);
+	color:white;
+	font-size:2em;
+	font-weight:normal;
+	text-align:center;
+	background-image:url('bg.jpg');
+}
+
+
+#posts_box{
+	display:block;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;
+	padding-top:1px;
+	background-color: #111111;
+	background-image: url('grunge_w.png');
+	background-position:top;
+	background-repeat: repeat-x;
+}
+
+#posts_box h3{
+	text-align:center;
+	font-family: Downcome-Regular, serif;
+	text-shadow: 0px 3px 1px rgba(0, 4, 0, 1);
+	color:white;
+	font-size:2em;
+	font-weight:normal;
+	background-image:url('bg.jpg');
+}
+
+.history_listing{
+	color:#ededed;
+
+}
+.history_listing a{
+	color:#ededed;
+	text-decoration:none;
+}
+.history_listing a:visited{
+	color:#ededed;
+	text-decoration:none;
+}
+.history_listing a:hover{
+	color:red;
+	text-decoration:none;
+}
+.history_listing a:active{
+	color:#ededed;
+	text-decoration:none;
+}
+
+.history_listing_title{
+	font-family: IM Fell English, serif;
+	text-transform:uppercase;
+	font-weight:600;
+}
+
+.history_datetime{
+	color:#5E5E5E;
+	font-size:.9em;
+}
+
+#footer_pad{
+	height:10px;
+}
+
+#footer_wrapper{
+	clear:both;
+	width:500px;
+	margin-left:43.5%;
+}
+
+#footer{
+	font-family: IM Fell English, serif;
+	text-transform:uppercase;
+	color:#A5AFB8;
+}
+#footer a{
+	color:#A5AFB8;
+}
+#footer a:active, a:visited{
+	color:#A5AFB8;
+}
+#footer a:hover {
+	color:red;
+}

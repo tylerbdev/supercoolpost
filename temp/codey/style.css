@@ -1,0 +1,197 @@
+body {
+	background-color:#000000;
+	font-family:sans-serif;
+}
+
+#wrapper {
+	width:70%;
+	margin:auto;
+	min-width:960px;
+	height:95%;
+
+}
+
+#header{
+	display:block;
+	margin-top:30px;
+	line-height: 320%;
+	text-align:center;
+}
+
+#header .title {
+	font-size:3em;
+	color:#64DE5F;
+	font-family: 'Press Start 2P', sans-serif;
+}
+#header .title a{
+	text-decoration:none;
+	color:#64DE5F;
+}
+#header .title a:visited{
+	text-decoration:none;
+	color:#64DE5F;
+}
+#header .title a:active{
+	text-decoration:none;
+	color:#64DE5F;
+}
+#header .title a:hover{
+	text-decoration:none;
+	color:#AEFF00;
+}
+
+#header .subtitle {
+	font-size:.8em;
+	color:#64DE5F;
+	font-family: 'Press Start 2P', sans-serif;
+}
+
+#main {
+	display:block;
+	border:15px double #64DE5F;
+	float:left;
+	width:66%;
+	margin-top:10px;
+	margin-bottom:30px;
+	padding:10px;
+}
+
+.post_title {
+	color:#64DE5F;
+	font-size:1.5em;
+	font-family: 'Press Start 2P', sans-serif;
+}
+
+.post_listing {	
+	font-family:sans-serif;
+}
+
+.post_listing a {	
+	font-family: 'Press Start 2P', sans-serif;
+	color:#64DE5F;
+	text-decoration:none;
+}
+.post_listing a:visited {	
+	font-family: 'Press Start 2P', sans-serif;
+	color:#64DE5F;
+	text-decoration:none;	
+}
+.post_listing a:hover {	
+	font-family: 'Press Start 2P', sans-serif;
+	color:#AEFF00;	
+}
+
+
+.datetime {
+	color:#64DE5F;
+}
+.post_listing_title {
+	font-family: 'Press Start 2P', sans-serif;
+	color:#64DE5F;
+	font-size:1.5em;
+}
+
+.post_listing_body {
+	color:black;
+	font-style:italic;
+}
+
+#sidebox {
+	display:block;
+	float:right;
+	width:27%;
+	margin-top:10px;
+	overflow:hidden;
+}
+#sidebox h3 {
+	margin-top:10px;
+}
+
+#about_box {
+	color:#64DE5F;
+	border:15px double #64DE5F;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;
+	padding-top:1px;
+	margin-bottom:16px;
+
+}
+#about_box h3 {
+	font-family: 'Press Start 2P', sans-serif;
+	text-transform: uppercase;
+}
+
+
+#posts_box{
+
+	border:15px double #64DE5F;
+	display:block;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;
+	padding-top:1px;
+
+}
+
+#posts_box h3{
+	font-family: 'Press Start 2P', sans-serif;
+	text-transform: uppercase;
+	color:#64DE5F;
+}
+
+.history_listing{
+	color:#64DE5F;
+
+}
+.history_listing a{
+	color:#64DE5F;
+	text-decoration:none;
+}
+.history_listing a:visited{
+	color:#64DE5F;
+	text-decoration:none;
+}
+.history_listing a:hover{
+	color:#AEFF00;
+	text-decoration:none;
+}
+.history_listing a:active{
+	color:#64DE5F;
+	text-decoration:none;
+}
+
+.history_listing_title{
+	font-family: 'Press Start 2P', sans-serif;
+	font-weight:600;
+}
+
+.history_datetime{
+	color:#64DE5F;
+	font-size:.9em;
+}
+
+#footer_pad{
+	height:10px;
+}
+
+#footer_wrapper{
+	clear:both;
+	width:500px;
+	margin-left:43.5%;
+}
+
+#footer{
+	font-family:sans-serif;
+	font-size:.85em;
+	color:#64DE5F;
+}
+#footer a{
+	color:#64DE5F;;
+}
+#footer a:active, a:visited{
+	color:#64DE5F;;
+}
+#footer a:hover {
+	color:#AEFF00;
+}
