@@ -4,6 +4,7 @@
 <head>
 <title>"Welcome to SuperCoolPost!"</title>
 <link rel="stylesheet" href="css/style.css">
+<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
 <script src="jquery-1.11.2.min.js" type="text/javascript"></script>
 </head>
 <body>

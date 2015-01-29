@@ -101,13 +101,6 @@ body {
 	text-transform:uppercase;
 }
 
-.post_body {
-	background-color:rgba(256,256,256,.5);
-	border-radius:25px;
-	padding:5px;
-	display:inline-block;
-}
-
 .post_listing {	
 	font-family:serif;
 
@@ -245,7 +238,6 @@ body {
 
 #footer{
 	font-family: IM Fell English, serif;
-	text-transform:uppercase;
 	color:#A5AFB8;
 }
 #footer a{
