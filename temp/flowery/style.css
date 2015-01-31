@@ -68,6 +68,10 @@ body {
 	font-size:3em;
 	font-family: Niconne, cursive;
 }
+.post_body {
+	color:rgb(195, 57, 119);
+	font-family: Niconne, cursive;
+}
 
 .post_listing {	
 	font-family:sans-serif;
@@ -100,7 +104,25 @@ font-family: Niconne, cursive;
 
 .post_listing_body {
 	color:black;
-	font-style:italic;
+}
+
+.page_buttons {
+	font-family: Niconne, cursive;
+	color:rgb(195, 57, 119);
+	font-size:1.9em;
+	line-height:.75%;
+}
+.page_buttons a{
+	text-decoration:underline;
+}
+.page_buttons a:hover{
+	color:#484687;
+}
+.prev_entry_button{
+	text-align:left;
+}
+.next_entry_button{
+	float:right;
 }
 
 #sidebox {

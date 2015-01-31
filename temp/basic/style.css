@@ -65,10 +65,6 @@ body {
 	font-family: Raleway, sans-serif;
 }
 
-.post_listing {	
-	font-family:sans-serif;
-}
-
 .post_listing a {	
 	font-family: Raleway, sans-serif;
 	font-weight:600;
@@ -99,7 +95,19 @@ body {
 
 .post_listing_body {
 	color:black;
-	font-style:italic;
+}
+
+.page_buttons a{
+	text-decoration:underline;
+}
+.page_buttons a:hover{
+	color:#7698CF;
+}
+.prev_entry_button{
+	text-align:left;
+}
+.next_entry_button{
+	float:right;
 }
 
 #sidebox {

@@ -35,8 +35,8 @@ $first_setup_complete = $main_row[0]['first_setup_complete'];
 				<div class="main_box">
 					<h2 class="panel_title">New Post</h2>
 					<form name="insert_post" action="insert.php" method="POST">
-					<textarea class="textbox" cols="40" rows="1" name="title" placeholder="Title"></textarea>
-					<textarea class="textbox" cols="40" rows="5" name="body"></textarea>
+					<textarea class="textbox" style="resize:none" cols="40" rows="1" maxlength="60" name="title" placeholder="Title"></textarea>
+					<textarea style="resize:vertical" class="textbox" cols="40" rows="35" name="body"></textarea>
 					<input type="submit" name="submit_post" value="Post"></input><input type="submit" name="submit_post" value="Save As Draft"></input>
 					</form>
 				</div>

@@ -1,5 +1,6 @@
 body {
 	background-color:#000000;
+	color:#64DE5F;
 	font-family:sans-serif;
 }
 
@@ -61,7 +62,9 @@ body {
 	font-size:1.5em;
 	font-family: 'Press Start 2P', sans-serif;
 }
-
+.post_body{
+	color:#64DE5F;
+}
 .post_listing {	
 	font-family:sans-serif;
 }
@@ -80,6 +83,22 @@ body {
 	font-family: 'Press Start 2P', sans-serif;
 	color:#AEFF00;	
 }
+.page_buttons{
+	font-family: 'Press Start 2P', sans-serif;
+	color:#64DE5F;
+}
+.page_buttons a{
+	text-decoration:underline;
+}
+.page_buttons a:hover{
+	color:#7698CF;
+}
+.prev_entry_button{
+	text-align:left;
+}
+.next_entry_button{
+	float:right;
+}
 
 
 .datetime {
@@ -92,8 +111,7 @@ body {
 }
 
 .post_listing_body {
-	color:black;
-	font-style:italic;
+	color::#64DE5F;
 }
 
 #sidebox {
