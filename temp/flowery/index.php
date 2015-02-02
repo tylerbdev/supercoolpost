@@ -102,8 +102,9 @@ usort($blogs_row, "compare_datetimes");
 				}
 			} 
 
-			foreach($archive_dates as $key => $value){
-				$archive_count = array($value => 0);
+			foreach($months_table as $key => $value){
+				$months_table = array($value => 0);
+			
 			}
 			
 			$blogs_row_reversed = array_reverse($blogs_row);
@@ -125,9 +126,47 @@ usort($blogs_row, "compare_datetimes");
 						if($new_n != $prev_n){
 
 							 foreach($blogs_row_reversed as $t){
-							 	if($n_count == 0) { echo '<p>' . $n . '</p>'; }
-							 	$n_count=1;
+							 	switch($n){
+							 		case -01:
+							 		$n_name = "January";
+							 		break;
+							 		case -02:
+							 		$n_name = "February";
+							 		break;
+							 		case -03:
+							 		$n_name = "March";
+							 		break;
+							 		case -04:
+							 		$n_name = "April";
+							 		break;
+							 		case -05:
+							 		$n_name = "May";
+							 		break;
+							 		case -06:
+							 		$n_name = "June";
+							 		break;
+							 		case -07:
+							 		$n_name = "July";
+							 		break;
+							 		case -08:
+							 		$n_name = "August";
+							 		break;
+							 		case -09:
+							 		$n_name = "September";
+							 		break;
+							 		case -10:
+							 		$n_name = "October";
+							 		break;
+							 		case -11:
+							 		$n_name = "November";
+							 		break;
+							 		case -12:
+							 		$n_name = "December";
+							 		break;
+							 	}
 								if(substr($t['datetime'], 0, 4) == $new_y && substr($t['datetime'], 4, 3) == $n){
+									if($n_count == 0) { echo '<p>' . $n_name . '</p>'; }
+							 	$n_count=1;
 									echo '<p>' . $t['title'] . '</p>';
 								}
 							}
