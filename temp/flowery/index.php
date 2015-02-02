@@ -94,11 +94,63 @@ usort($blogs_row, "compare_datetimes");
 			<div id="history_flair"><img src="rose.png"></div>
 			<h3>Blog History</h3>
 			<p><?php 
-				for($count = 0; $count < count($blogs_row); $count++){
-				if($blogs_row[$count]['draft'] == 0){
-					echo '<p><span class="history_listing">' . '<span class="history_listing_title"><a href="index.php?p=' . $blogs_row[$count]['id'] . '">' . $blogs_row[$count]['title'] . '</a></span></br><span class="history_datetime">' . $blogs_row[$count]['datetime'] . ' </span>';			
+			//
+			$yrs = array('2014', '2015', '2016');
+			for($x=0; $x<count($yrs); $x++){
+				for($y=0; $y<12; $y++){
+				$archive_dates[($yrs[$x])][$y] = "-" . sprintf("%02s", ($y+1));
+				}
+			} 
+
+			foreach($archive_dates as $key => $value){
+				$archive_count = array($value => 0);
+			}
+			
+			$blogs_row_reversed = array_reverse($blogs_row);
+			echo "<pre>";
+			print_r($archive_dates);
+			print_r(array_keys($archive_dates));
+			print_r($arcive_count);
+			echo "</pre>";
+			
+			
+			foreach($archive_dates as $key => $value){
+				$new_y = $key;
+				$new_m = $value;
+				if($new_y != $prev_y){
+					echo '<p>' . $new_y . '</p>';
+					foreach($new_m as $n){
+						$new_n = $n;
+						$n_count = 0;
+						if($new_n != $prev_n){
+
+							 foreach($blogs_row_reversed as $t){
+							 	if($n_count == 0) { echo '<p>' . $n . '</p>'; }
+							 	$n_count=1;
+								if(substr($t['datetime'], 0, 4) == $new_y && substr($t['datetime'], 4, 3) == $n){
+									echo '<p>' . $t['title'] . '</p>';
+								}
+							}
+						$prev_n = $new_n;
 					}
 				}
+					// foreach($blogs_row_reversed as $t){
+					// 	echo $new_y;
+					// 	echo $new_m;
+					// 	if(substr($t['datetime'], 0, 4) == $new_y){
+					// 		echo '<p>' . $t['title'] . '</p>';
+					// 	}
+					// }
+				}
+				$prev_y = $new_y;
+			}
+			
+
+				// for($count = 0; $count < count($blogs_row); $count++){
+				// if($blogs_row[$count]['draft'] == 0){
+				// 	echo '<p><span class="history_listing">' . '<span class="history_listing_title"><a href="index.php?p=' . $blogs_row[$count]['id'] . '">' . $blogs_row[$count]['title'] . '</a></span></br><span class="history_datetime">' . $blogs_row[$count]['datetime'] . ' </span>';			
+				// 	}
+				// }
 			 ?></p>
 		</div>
 	</div>
