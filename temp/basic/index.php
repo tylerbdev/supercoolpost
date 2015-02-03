@@ -86,8 +86,6 @@ usort($blogs_row, "compare_datetimes");
 				}
 				echo '</p>';	
 				}
-
-
 				?>
 	</div> 
 	<div id="sidebox">
