@@ -1,15 +1,7 @@
 <?php session_start();
 include "../../db.php";
 error_reporting(E_ALL & ~E_NOTICE); 
-?>
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="style.css">
-<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
-</head>
-<body>
 
-<?php
 //Get blog posts
 $stmt = $db->prepare('SELECT * FROM blogs WHERE owner = ?');
 $stmt->bindParam(1, $_SESSION['uid'], PDO::PARAM_INT);
@@ -22,6 +14,18 @@ $stmt->bindParam(1, $_SESSION['uid'], PDO::PARAM_INT);
 $stmt->execute();
 $main_row = $stmt->fetchALL(PDO::FETCH_ASSOC);
 
+echo '<html>';
+echo '<head>';
+echo '<title>' . $main_row[0]['title'] . ' - ' . $main_row[0]['subtitle'] . '</title>';
+
+?>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<?php
+//Deny access if blog is private and visitor is not logged in owner
 if($main_row[0][public_toggle] == 0){
 	header("Location:../private.php");
 }

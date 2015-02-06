@@ -58,9 +58,9 @@ $(function() {
 					<h1 class="panel_title">Edit Blog Settings</h1>
 					<form name="update_blog_settings" action="update_blog.php" method="POST">
 					<label>Blog Title:</label>
-					<textarea class="textbox" cols="40" rows="1" maxlength="30" name="title"><?php echo $row[0]['title']?></textarea>
+					<textarea class="textbox" cols="40" rows="1" maxlength="30" style="resize:none" name="title"><?php echo $row[0]['title']?></textarea>
 					<label>Blog Subtitle:</label></br>
-					<textarea class="textbox" cols="40" rows="1" maxlength="30" name="subtitle"><?php echo $row[0]['subtitle']?></textarea>
+					<textarea class="textbox" cols="40" rows="1" maxlength="30" style="resize:none"name="subtitle"><?php echo $row[0]['subtitle']?></textarea>
 					<label>Theme:</label></br>
 					<select name="theme">
 						<option value="basic">Basic</option>
@@ -184,7 +184,9 @@ $(function() {
 </article>
 
 
-
+<script>
+	document.title = "Edit Blog Settings";
+</script>
 
 </body>
 

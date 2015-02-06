@@ -87,9 +87,9 @@ $first_setup_complete = $main_row[0]['first_setup_complete'];
 
 				for($count = $posts_page_start; $count < $posts_page_start+8 && $count < count($row); $count++){
 					if($row[$count]['draft'] == 1){
-					echo '<p><span class="post_listing">' . '<span class="post_listing_title">' . $row[$count]['title'] . ' (Draft)</span></br>' . '<span class="post_listing_body">' . substr($row[$count]['body'],0,60) . '...</span></br><span class="datetime">' . $row[$count]['datetime'] . ' | </span><span class="listing_buttons"><a href="edit_post.php?post_id=' . $row[$count]['id'] . '">Edit</a></span>   <span class="listing_buttons"><a href="delete_post.php?post_id=' . $row[$count]['id'] . '" onclick="return confirm(\'Warning: This is not an undoable action. Are you sure you want to delete this post?\');">Delete</a></span> <span class="listing_buttons"><a href="member_blog/' . $main_row[0]['username'] . '/index.php?p=' . $row[$count]['id'] . '">View</a></span></p>';			
+					echo '<p><span class="post_listing">' . '<span class="post_listing_title">' . $row[$count]['title'] . ' (Draft)</span></br>' . '<span class="post_listing_body">' . substr($row[$count]['body'],0,60) . '...</span></br><span class="datetime">' . $row[$count]['datetime'] . ' | </span><span class="listing_buttons"><a href="edit_post.php?post_id=' . $row[$count]['id'] . '">Edit</a></span>   <span class="listing_buttons"><a href="delete_post.php?post_id=' . $row[$count]['id'] . '" onclick="return confirm(\'Warning: This is not an undoable action. Are you sure you want to delete this post?\');">Delete</a></span> <span class="listing_buttons"><a href="member_blog/' . $main_row[0]['username'] . '/index.php?p=' . $row[$count]['id'] . '" target="_blank">View</a></span></p>';			
 					} else {
-						echo '<p><span class="post_listing">' . '<span class="post_listing_title">' . $row[$count]['title'] . '</span></br>' . '<span class="post_listing_body">' . substr($row[$count]['body'],0,60) . '...</span></br><span class="datetime">' . $row[$count]['datetime'] . ' | </span><span class="listing_buttons"><a href="edit_post.php?post_id=' . $row[$count]['id'] . '">Edit</a></span>   <span class="listing_buttons"><a href="delete_post.php?post_id=' . $row[$count]['id'] . '" onclick="return confirm(\'Warning: This is not an undoable action. Are you sure you want to delete this post?\');">Delete</a></span> <span class="listing_buttons"><a href="member_blog/' . $main_row[0]['username'] . '/index.php?p=' . $row[$count]['id'] . '">View</a></span></p>';			
+						echo '<p><span class="post_listing">' . '<span class="post_listing_title">' . $row[$count]['title'] . '</span></br>' . '<span class="post_listing_body">' . substr($row[$count]['body'],0,60) . '...</span></br><span class="datetime">' . $row[$count]['datetime'] . ' | </span><span class="listing_buttons"><a href="edit_post.php?post_id=' . $row[$count]['id'] . '">Edit</a></span>   <span class="listing_buttons"><a href="delete_post.php?post_id=' . $row[$count]['id'] . '" onclick="return confirm(\'Warning: This is not an undoable action. Are you sure you want to delete this post?\');">Delete</a></span> <span class="listing_buttons"><a href="member_blog/' . $main_row[0]['username'] . '/index.php?p=' . $row[$count]['id'] . '" target="_blank">View</a></span></p>';			
 					}
 				}	
 
@@ -116,9 +116,6 @@ $first_setup_complete = $main_row[0]['first_setup_complete'];
 
 
 </article>
-
-
-
 
 </body>
 

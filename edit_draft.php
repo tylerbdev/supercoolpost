@@ -30,8 +30,8 @@ $post_id = $_GET['post_id']
 				<div class="main_box">
 					<h1 class="panel_title">Edit Draft</h1>
 					<form name="update_draft_form" action="update_draft.php" method="POST">
-					<textarea class="textbox" cols="40" rows="1" name="title" maxlength="60" placeholder="Title"><?php echo $row[0]['title']?></textarea>
-					<textarea class="textbox" cols="40" rows="5" name="body"><?php echo $row[0]['body']?></textarea>
+					<textarea class="textbox" style="resize:none" cols="40" rows="1" name="title" maxlength="60" placeholder="Title"><?php echo $row[0]['title']?></textarea>
+					<textarea style="resize:vertical" class="textbox" cols="40" rows="35" name="body"><?php echo $row[0]['body']?></textarea>
 					<input type="checkbox" name="update_datetime" value="update_datetime" checked>Update Date and Time<br>
 					<input type="submit" name="update_draft" value="Update Draft"></input><input type="submit" name="update_draft" value="Post"></input>
 					<input type="hidden" name="post_id" value="<?php echo $post_id ?>" />
@@ -55,6 +55,9 @@ $post_id = $_GET['post_id']
 
 
 
+<script>
+	document.title = "Edit Draft";
+</script
 
 </body>
 

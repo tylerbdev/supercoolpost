@@ -27,8 +27,8 @@ $owner = $_SESSION['uid'];
 				<div class="main_box">
 					<h1 class="panel_title">Edit Post</h1>
 					<form name="update_post_form" action="update_post.php" method="POST">
-					<textarea class="textbox" cols="40" rows="1" name="title" maxlength="60" placeholder="Title"><?php echo $row[0]['title']?></textarea>
-					<textarea class="textbox" cols="40" rows="5" name="body"><?php echo $row[0]['body']?></textarea>
+					<textarea class="textbox" style="resize:none" cols="40" rows="1" name="title" maxlength="60" placeholder="Title"><?php echo $row[0]['title']?></textarea>
+					<textarea style="resize:vertical" class="textbox" cols="40" rows="35" name="body"><?php echo $row[0]['body']?></textarea>
 					<input type="checkbox" name="update_datetime" value="update_datetime">Update Date and Time (This will change the current display order on your blog)<br>
 					<input type="submit" name="update_post" value="Update"></input><input type="submit" name="update_post" value="Save As Draft"></input>
 					<input type="hidden" name="post_id" value="<?php echo $post_id ?>" />
@@ -52,6 +52,9 @@ $owner = $_SESSION['uid'];
 
 
 
+<script>
+	document.title = "Edit Post";
+</script
 
 </body>
 

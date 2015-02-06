@@ -25,7 +25,7 @@ $row = $stmt->fetchALL(PDO::FETCH_ASSOC);
 				<div class="main_box">
 					<h1 class="panel_title">Edit About</h1>
 					<form name="update_about_form" action="update_about.php" method="POST">
-					<textarea class="textbox" cols="40" rows="5" name="about"><?php echo $row[0]['about']?></textarea>
+					<textarea class="textbox" cols="40" rows="5" style="resize:none" name="about"><?php echo $row[0]['about']?></textarea>
 					<input type="submit" name="update_about" value="Update"></input></input>
 					</form>
 
@@ -46,7 +46,9 @@ $row = $stmt->fetchALL(PDO::FETCH_ASSOC);
 </article>
 
 
-
+<script>
+	document.title = "Edit About";
+</script>
 
 </body>
 
